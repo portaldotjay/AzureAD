@@ -1,0 +1,416 @@
+Creates Dynamic Groups based on the extension created for Grade level by SDS. 
+
+The mailNickname property will need to be changed to a unique value. I just used a random string. 
+
+This one was easy enough to do in Graph Explorer. https://developer.microsoft.com/en-us/graph/graph-explorer
+
+Method - POST
+URL - https://graph.microsoft.com/beta/$batch
+Body -
+{
+    "requests": [
+        {
+            "id": "1",
+            "method": "POST",
+            "url": "/groups",
+            "headers": {
+                "Content-Type": "application/json"
+            },
+            "body": {
+                "displayName": "SDS GRADE Infant Toddler",
+                "mailEnabled": false,
+                "mailNickname": "mailnickname",
+                "securityEnabled": true,
+                "description": "All Infant/toddler Grade Students synced by SDS",
+                "groupTypes": [
+                    "DynamicMembership"
+                ],
+                "membershipRule": "(user.extension_fe2174665583431c953114ff7268b7b3_Education_Grade -eq \"IT\")",
+                "membershipRuleProcessingState": "On"
+            }
+        },
+        {
+            "id": "2",
+            "method": "POST",
+            "url": "/groups",
+            "headers": {
+                "Content-Type": "application/json"
+            },
+            "body": {
+                "displayName": "SDS GRADE Preschool",
+                "mailEnabled": false,
+                "mailNickname": "mailnickname",
+                "securityEnabled": true,
+                "description": "All Preschool Grade Students synced by SDS",
+                "groupTypes": [
+                    "DynamicMembership"
+                ],
+                "membershipRule": "(user.extension_fe2174665583431c953114ff7268b7b3_Education_Grade -eq \"PR\")",
+                "membershipRuleProcessingState": "On"
+            }
+        },
+        {
+            "id": "3",
+            "method": "POST",
+            "url": "/groups",
+            "headers": {
+                "Content-Type": "application/json"
+            },
+            "body": {
+                "displayName": "SDS GRADE Pre-K",
+                "mailEnabled": false,
+                "mailNickname": "mailnickname",
+                "securityEnabled": true,
+                "description": "All Prekindergarten Grade Students synced by SDS",
+                "groupTypes": [
+                    "DynamicMembership"
+                ],
+                "membershipRule": "(user.extension_fe2174665583431c953114ff7268b7b3_Education_Grade -eq \"PK\")",
+                "membershipRuleProcessingState": "On"
+            }
+        },
+        {
+            "id": "4",
+            "method": "POST",
+            "url": "/groups",
+            "headers": {
+                "Content-Type": "application/json"
+            },
+            "body": {
+                "displayName": "SDS GRADE K",
+                "mailEnabled": false,
+                "mailNickname": "mailnickname",
+                "securityEnabled": true,
+                "description": "All Kindergarten Grade Students synced by SDS",
+                "groupTypes": [
+                    "DynamicMembership"
+                ],
+                "membershipRule": "(user.extension_fe2174665583431c953114ff7268b7b3_Education_Grade -eq \"KG\")",
+                "membershipRuleProcessingState": "On"
+            }
+        },
+        {
+            "id": "5",
+            "method": "POST",
+            "url": "/groups",
+            "headers": {
+                "Content-Type": "application/json"
+            },
+            "body": {
+                "displayName": "SDS GRADE 1",
+                "mailEnabled": false,
+                "mailNickname": "mailnickname",
+                "securityEnabled": true,
+                "description": "All First Grade Students synced by SDS",
+                "groupTypes": [
+                    "DynamicMembership"
+                ],
+                "membershipRule": "(user.extension_fe2174665583431c953114ff7268b7b3_Education_Grade -eq \"01\")",
+                "membershipRuleProcessingState": "On"
+            }
+        },
+        {
+            "id": "6",
+            "method": "POST",
+            "url": "/groups",
+            "headers": {
+                "Content-Type": "application/json"
+            },
+            "body": {
+                "displayName": "SDS GRADE 2",
+                "mailEnabled": false,
+                "mailNickname": "mailnickname",
+                "securityEnabled": true,
+                "description": "All Second Grade Students synced by SDS",
+                "groupTypes": [
+                    "DynamicMembership"
+                ],
+                "membershipRule": "(user.extension_fe2174665583431c953114ff7268b7b3_Education_Grade -eq \"02\")",
+                "membershipRuleProcessingState": "On"
+            }
+        },
+        {
+            "id": "7",
+            "method": "POST",
+            "url": "/groups",
+            "headers": {
+                "Content-Type": "application/json"
+            },
+            "body": {
+                "displayName": "SDS GRADE 3",
+                "mailEnabled": false,
+                "mailNickname": "mailnickname",
+                "securityEnabled": true,
+                "description": "All Third Grade Students synced by SDS",
+                "groupTypes": [
+                    "DynamicMembership"
+                ],
+                "membershipRule": "(user.extension_fe2174665583431c953114ff7268b7b3_Education_Grade -eq \"03\")",
+                "membershipRuleProcessingState": "On"
+            }
+        },
+        {
+            "id": "8",
+            "method": "POST",
+            "url": "/groups",
+            "headers": {
+                "Content-Type": "application/json"
+            },
+            "body": {
+                "displayName": "SDS GRADE 4",
+                "mailEnabled": false,
+                "mailNickname": "mailnickname",
+                "securityEnabled": true,
+                "description": "All Fourth Grade Students synced by SDS",
+                "groupTypes": [
+                    "DynamicMembership"
+                ],
+                "membershipRule": "(user.extension_fe2174665583431c953114ff7268b7b3_Education_Grade -eq \"04\")",
+                "membershipRuleProcessingState": "On"
+            }
+        },
+        {
+            "id": "9",
+            "method": "POST",
+            "url": "/groups",
+            "headers": {
+                "Content-Type": "application/json"
+            },
+            "body": {
+                "displayName": "SDS GRADE 5",
+                "mailEnabled": false,
+                "mailNickname": "mailnickname",
+                "securityEnabled": true,
+                "description": "All Fifth Grade Students synced by SDS",
+                "groupTypes": [
+                    "DynamicMembership"
+                ],
+                "membershipRule": "(user.extension_fe2174665583431c953114ff7268b7b3_Education_Grade -eq \"05\")",
+                "membershipRuleProcessingState": "On"
+            }
+        },
+        {
+            "id": "10",
+            "method": "POST",
+            "url": "/groups",
+            "headers": {
+                "Content-Type": "application/json"
+            },
+            "body": {
+                "displayName": "SDS GRADE 6",
+                "mailEnabled": false,
+                "mailNickname": "mailnickname",
+                "securityEnabled": true,
+                "description": "All Sixth Grade Students synced by SDS",
+                "groupTypes": [
+                    "DynamicMembership"
+                ],
+                "membershipRule": "(user.extension_fe2174665583431c953114ff7268b7b3_Education_Grade -eq \"06\")",
+                "membershipRuleProcessingState": "On"
+            }
+        },
+        {
+            "id": "11",
+            "method": "POST",
+            "url": "/groups",
+            "headers": {
+                "Content-Type": "application/json"
+            },
+            "body": {
+                "displayName": "SDS GRADE 7",
+                "mailEnabled": false,
+                "mailNickname": "mailnickname",
+                "securityEnabled": true,
+                "description": "All Seventh Grade Students synced by SDS",
+                "groupTypes": [
+                    "DynamicMembership"
+                ],
+                "membershipRule": "(user.extension_fe2174665583431c953114ff7268b7b3_Education_Grade -eq \"07\")",
+                "membershipRuleProcessingState": "On"
+            }
+        },
+        {
+            "id": "12",
+            "method": "POST",
+            "url": "/groups",
+            "headers": {
+                "Content-Type": "application/json"
+            },
+            "body": {
+                "displayName": "SDS GRADE 8",
+                "mailEnabled": false,
+                "mailNickname": "mailnickname",
+                "securityEnabled": true,
+                "description": "All Eighth Grade Students synced by SDS",
+                "groupTypes": [
+                    "DynamicMembership"
+                ],
+                "membershipRule": "(user.extension_fe2174665583431c953114ff7268b7b3_Education_Grade -eq \"08\")",
+                "membershipRuleProcessingState": "On"
+            }
+        },
+        {
+            "id": "13",
+            "method": "POST",
+            "url": "/groups",
+            "headers": {
+                "Content-Type": "application/json"
+            },
+            "body": {
+                "displayName": "SDS GRADE 9",
+                "mailEnabled": false,
+                "mailNickname": "mailnickname",
+                "securityEnabled": true,
+                "description": "All Ninth Grade Students synced by SDS",
+                "groupTypes": [
+                    "DynamicMembership"
+                ],
+                "membershipRule": "(user.extension_fe2174665583431c953114ff7268b7b3_Education_Grade -eq \"09\")",
+                "membershipRuleProcessingState": "On"
+            }
+        },
+        {
+            "id": "14",
+            "method": "POST",
+            "url": "/groups",
+            "headers": {
+                "Content-Type": "application/json"
+            },
+            "body": {
+                "displayName": "SDS GRADE 10",
+                "mailEnabled": false,
+                "mailNickname": "mailnickname",
+                "securityEnabled": true,
+                "description": "All Tenth Grade Students synced by SDS",
+                "groupTypes": [
+                    "DynamicMembership"
+                ],
+                "membershipRule": "(user.extension_fe2174665583431c953114ff7268b7b3_Education_Grade -eq \"10\")",
+                "membershipRuleProcessingState": "On"
+            }
+        },
+        {
+            "id": "15",
+            "method": "POST",
+            "url": "/groups",
+            "headers": {
+                "Content-Type": "application/json"
+            },
+            "body": {
+                "displayName": "SDS GRADE 11",
+                "mailEnabled": false,
+                "mailNickname": "mailnickname",
+                "securityEnabled": true,
+                "description": "All Eleventh Grade Students synced by SDS",
+                "groupTypes": [
+                    "DynamicMembership"
+                ],
+                "membershipRule": "(user.extension_fe2174665583431c953114ff7268b7b3_Education_Grade -eq \"11\")",
+                "membershipRuleProcessingState": "On"
+            }
+        },
+        {
+            "id": "16",
+            "method": "POST",
+            "url": "/groups",
+            "headers": {
+                "Content-Type": "application/json"
+            },
+            "body": {
+                "displayName": "SDS GRADE 12",
+                "mailEnabled": false,
+                "mailNickname": "mailnickname",
+                "securityEnabled": true,
+                "description": "All Twelth Grade Students synced by SDS",
+                "groupTypes": [
+                    "DynamicMembership"
+                ],
+                "membershipRule": "(user.extension_fe2174665583431c953114ff7268b7b3_Education_Grade -eq \"12\")",
+                "membershipRuleProcessingState": "On"
+            }
+        },
+        {
+            "id": "17",
+            "method": "POST",
+            "url": "/groups",
+            "headers": {
+                "Content-Type": "application/json"
+            },
+            "body": {
+                "displayName": "SDS GRADE 13",
+                "mailEnabled": false,
+                "mailNickname": "mailnickname",
+                "securityEnabled": true,
+                "description": "All Grade 13 Students synced by SDS",
+                "groupTypes": [
+                    "DynamicMembership"
+                ],
+                "membershipRule": "(user.extension_fe2174665583431c953114ff7268b7b3_Education_Grade -eq \"13\")",
+                "membershipRuleProcessingState": "On"
+            }
+        },
+        {
+            "id": "18",
+            "method": "POST",
+            "url": "/groups",
+            "headers": {
+                "Content-Type": "application/json"
+            },
+            "body": {
+                "displayName": "SDS GRADE Postsecondary",
+                "mailEnabled": false,
+                "mailNickname": "mailnickname",
+                "securityEnabled": true,
+                "description": "All Postsecondary Students synced by SDS",
+                "groupTypes": [
+                    "DynamicMembership"
+                ],
+                "membershipRule": "(user.extension_fe2174665583431c953114ff7268b7b3_Education_Grade -eq \"PS\")",
+                "membershipRuleProcessingState": "On"
+            }
+        },
+        {
+            "id": "19",
+            "method": "POST",
+            "url": "/groups",
+            "headers": {
+                "Content-Type": "application/json"
+            },
+            "body": {
+                "displayName": "SDS GRADE Ungraded",
+                "mailEnabled": false,
+                "mailNickname": "mailnickname",
+                "securityEnabled": true,
+                "description": "All Ungraded Students synced by SDS",
+                "groupTypes": [
+                    "DynamicMembership"
+                ],
+                "membershipRule": "(user.extension_fe2174665583431c953114ff7268b7b3_Education_Grade -eq \"UG\")",
+                "membershipRuleProcessingState": "On"
+            }
+        },
+        {
+            "id": "20",
+            "method": "POST",
+            "url": "/groups",
+            "headers": {
+                "Content-Type": "application/json"
+            },
+            "headers": {
+                "Content-Type": "application/json"
+            },
+            "body": {
+                "displayName": "SDS GRADE AD",
+                "mailEnabled": false,
+                "mailNickname": "mailnickname",
+                "securityEnabled": true,
+                "description": "All Adult Education Students synced by SDS",
+                "groupTypes": [
+                    "DynamicMembership"
+                ],
+                "membershipRule": "(user.extension_fe2174665583431c953114ff7268b7b3_Education_Grade -eq \"AD\")",
+                "membershipRuleProcessingState": "On"
+            }
+        }
+    ]
+}
